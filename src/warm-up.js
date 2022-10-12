@@ -42,9 +42,9 @@ var isFavorite = false;
 var shouldOrderMore = false;
 function checkStock() {
     if (inStock > 20) {
-        var shouldOrderMore = true;
+        shouldOrderMore = true;
     } else {
-        var shouldOrderMore = false;
+        shouldOrderMore = false;
     }
 }
 
