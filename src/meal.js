@@ -22,11 +22,16 @@ function addIngredients(ingredient, ingredients) {
   }
 }
 
+function formatPrice(initialPrice) {
+  var initialPrice = "$" + menuItem.price;
+  return initialPrice
+}
+
 module.exports = {
   nameMenuItem,
   createMenuItem,
   addIngredients,
-  // formatPrice,
+  formatPrice,
   // decreasePrice,
   // createRecipe
 }
