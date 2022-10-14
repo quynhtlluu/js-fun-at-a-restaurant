@@ -13,11 +13,21 @@ function refundOrder(orderNumber, deliveryOrders) {
   }
 }
 
-console.log(deliveryOrders);
+function listItems(deliveryOrders){
+  var items = ""
+  for (i = 0; i < deliveryOrders.length; i++){
+    if (i === deliveryOrders.length - 1){
+      items = items + deliveryOrders[i].item
+    } else {
+      items = items + deliveryOrders[i].item + ", "
+    }
+  }
+  return items
+}
 
 module.exports = {
   takeOrder,
   refundOrder,
-  // listItems,
+  listItems,
   // searchOrder
 }
