@@ -31,13 +31,22 @@ function decreasePrice() {
   return menuItem.price
 }
 
+function createRecipe(title, ingredients, menuItemType) {
+  recipe = {
+    title: title,
+    ingredients: ingredients,
+    type: menuItemType
+  }
+  return recipe
+}
+
 module.exports = {
   nameMenuItem,
   createMenuItem,
   addIngredients,
   formatPrice,
   decreasePrice,
-  // createRecipe
+  createRecipe
 }
 
 
