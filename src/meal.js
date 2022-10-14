@@ -14,17 +14,21 @@ function createMenuItem(name, price, type) {
 
 var ingredients = [];
 function addIngredients(ingredient, ingredients) {
-  ingredients.push(ingredient);
-  for (var i = 0; i < ingredients.length - 1; i++) {
-    if (ingredient === ingredients[i]) {
-      ingredients.pop();
-    }
+  if (ingredients.includes(ingredient)) {
+  } else {
+    ingredients.push(ingredient);
   }
 }
+
 
 function formatPrice(initialPrice) {
   var initialPrice = "$" + menuItem.price;
   return initialPrice
+}
+
+function decreasePrice() {
+  menuItem.price = menuItem.price - (menuItem.price * 0.10);
+  return menuItem.price
 }
 
 module.exports = {
@@ -32,7 +36,7 @@ module.exports = {
   createMenuItem,
   addIngredients,
   formatPrice,
-  // decreasePrice,
+  decreasePrice,
   // createRecipe
 }
 
