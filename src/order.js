@@ -5,9 +5,19 @@ function takeOrder(order, deliveryOrders) {
   }
 }
 
+function refundOrder(orderNumber, deliveryOrders) {
+  for (var i = 0; i < deliveryOrders.length; i++) {
+    if (orderNumber === deliveryOrders[i].orderNumber) {
+      deliveryOrders.splice(i, 1)
+    }
+  }
+}
+
+console.log(deliveryOrders);
+
 module.exports = {
   takeOrder,
-  // refundOrder,
+  refundOrder,
   // listItems,
   // searchOrder
 }
