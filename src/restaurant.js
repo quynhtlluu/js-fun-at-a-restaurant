@@ -6,12 +6,16 @@ function createRestaurant(name) {
         lunch: [],
         dinner: []
       }
-
   }
+}
+
+function addMenuItem(restaurant, menuItem) {
+  var menuItemType = menuItem.type;
+  restaurant.menus[menuItemType].unshift(menuItem)
 }
 
 module.exports = {
   createRestaurant, 
-  // addMenuItem,
+  addMenuItem,
   // removeMenuItem
 }
