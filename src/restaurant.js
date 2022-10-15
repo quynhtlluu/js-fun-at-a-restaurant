@@ -11,7 +11,9 @@ function createRestaurant(name) {
 
 function addMenuItem(restaurant, menuItem) {
   var menuItemType = menuItem.type;
-  restaurant.menus[menuItemType].unshift(menuItem)
+  if (restaurant.menus[menuItemType].includes(menuItem) === false) {
+    restaurant.menus[menuItemType].push(menuItem)
+  }
 }
 
 module.exports = {
